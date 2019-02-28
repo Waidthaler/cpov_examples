@@ -7,3 +7,6 @@ rm -f cephalopov.tgz
 cd ..
 tar -czvf cpov_examples/cephalopov.tgz --exclude=.* cephalopov
 cd cpov_examples
+npm uninstall cephalopov -g
+npm install cephalopov.tgz -g
+

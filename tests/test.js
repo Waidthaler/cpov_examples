@@ -67,6 +67,7 @@ function main(cpov) {
     testHeader(fp, ++testSerial, "Transform debug test #1");                    testTransformDebug1(fp);
     testHeader(fp, ++testSerial, "Transform scale/rotate/translate test");      testTransformSRT(fp);
     testHeader(fp, ++testSerial, "Primitive transformations test");             testPrimitiveTransformations(fp);
+
 }
 
 module.exports = main;
