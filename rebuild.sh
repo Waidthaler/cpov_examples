@@ -5,7 +5,7 @@
 
 rm -f cephalopov.tgz
 cd ..
-tar -czvf cpov_examples/cephalopov.tgz --exclude=.* cephalopov
+tar --exclude='.*' --exclude='node_modules' -czvf cpov_examples/cephalopov.tgz cephalopov
 cd cpov_examples
 npm uninstall cephalopov -g
 npm install cephalopov.tgz -g
