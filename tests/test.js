@@ -68,6 +68,7 @@ function main(cpov) {
     testHeader(fp, ++testSerial, "Transform scale/rotate/translate test");      testTransformSRT(fp);
     testHeader(fp, ++testSerial, "Primitive transformations test");             testPrimitiveTransformations(fp);
 
+    testHeader(fp, ++testSerial, "Finish test #1");                             testFinish(fp);
 }
 
 module.exports = main;
@@ -77,6 +78,41 @@ module.exports = main;
 // detecting regressions after the bug has been fixed.
 //------------------------------------------------------------------------------
 
+
+//==============================================================================
+
+function testFinish(fp) {
+
+    var finish = new Finish({
+        identifier: "SomeFinish",
+        ambient: new Color([ 0.2, 0.2, 0.2 ]),
+        diffuse: 0.5,
+        diffuseAlbedo: true,
+        diffuseBack: 0.1,
+        brilliance: 0.987,
+        emission: new Color([0.1, 0.1, 0 ]),
+        crand: 0.01,
+        subsurface: new Color([0.5, 0.2, 0.1]),
+        phong: 90,
+        phongAlbedo: true,
+        phongSize: 21,
+        specular: 2.2,
+        specularAlbedo: true,
+        specularRoughness: 0.657,
+        metallic: 0.2,
+        reflectMin: new Color([0.6, 0.7, 0.8]),
+        reflectMax: new Color([0.81, 0.82, 0.83]),
+        reflectFresnel: true,
+        reflectFalloff: 0.2,
+        reflectExponent: 1.0,
+        reflectMetallic: 0.2,
+        conserveEnergy: true,
+        iridescence: 0.777,
+        iridThickness: 0.356,
+        iridTurbulence: 0.212
+    });
+    fp.write(finish.toSDL() + "\n\n");
+}
 
 //==============================================================================
 
