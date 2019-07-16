@@ -1,4 +1,0 @@
-[CEPHALOPOV] INFO: No output template specified, using 'cpov0000'.
-[CephaloPOV.configLoad] INFO: Failed to load global config file \etc\cpov\config.js
-[CephaloPOV.configLoad] INFO: Failed to load user config file C:\Users\eodell\cpov\config.js
-[CephaloPOV.configLoad] INFO: Failed to load project config file C:\dev\tmp\cpov_examples\tests\test.config.js
